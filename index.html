@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Penangguhan dan Penggantian Kuliah</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="manual_guide.html">
+        <i class="fa fa-book"></i> Manual Guide
+    </a>
+</nav>
+
+
+    <h2>Fill the PDF Form</h2>
+    <iframe id="pdfViewer" src="Borang Penangguhan dan Penggantian Kuliah.pdf"></iframe>
+
+    <div class="form-actions">
+        <button class="btn btn-4 icon-send" onclick="sendEmail1()">Send To "TPA"</button>
+        <button class="btn btn-4 icon-info" onclick="editPDF()">Edit File(Excel)</button>
+        <button class="btn btn-4 icon-send" onclick="sendEmail2()">Send To "KPA"</button>
+    </div>
+
+    <script>
+        function editPDF() {
+            window.open('https://docs.google.com/spreadsheets/d/1HpjUrWR6-VgSfbnhDNd7ol_azEucNMdC/edit?gid=1756592619#gid=1756592619', '_blank');
+        }
+
+        function sendEmail1() {
+            var subject = encodeURIComponent('Borang Penangguhan Dan Penggantian Kuliah');
+            var body = encodeURIComponent('Disertakan sekali file pdf di dalam email ini.');
+            var gmailUrl = 'mailto:nazila@kkseg.edu.my' + '?subject=' + subject + '&body=' + body;
+            window.open(gmailUrl, '_blank');
+        }
+
+        function sendEmail2() {
+            var subject = encodeURIComponent('Borang Penangguhan Dan Penggantian Kuliah');
+            var body = encodeURIComponent('Disertakan sekali file pdf di dalam email ini.');
+            var gmailUrl = 'mailto:kpro@kkseg.edu.my' + '?subject=' + subject + '&body=' + body;
+            window.open(gmailUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
